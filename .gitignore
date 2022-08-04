@@ -38,3 +38,7 @@ jspm_packages
 
 *.sqlite
 .idea
+
+sequelize-auto-migrations.iml
+
+sequelize-auto-migrations-v2-*.tgz
