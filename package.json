@@ -1,6 +1,6 @@
 {
   "name": "sequelize-auto-migrations-v2",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Sequelize migrations generator && runner",
   "main": "index.js",
   "private": false,
