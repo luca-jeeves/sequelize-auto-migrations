@@ -17,6 +17,7 @@ const optionDefinitions = [
   { name: 'execute', alias: 'x', type: Boolean, description: 'Create new migration and execute it' },
   { name: 'migrations-path', type: String, description: 'The path to the migrations folder' },
   { name: 'models-path', type: String, description: 'The path to the models folder' },
+  { name: 'version2', type: Boolean, description: 'Write migration v2, with context arg in the up function' },
   { name: 'help', type: Boolean, description: 'Show this message' }
 ];
 
@@ -111,7 +112,8 @@ let info = migrate.writeMigration(currentState.revision,
   migration,
   migrationsDir,
   (options.name) ? options.name : 'noname',
-  (options.comment) ? options.comment : '');
+  (options.comment) ? options.comment : '',
+    options['version2'] ?? false);
 
 console.log(`New migration to revision ${currentState.revision} has been saved to file '${info.filename}'`);
 
